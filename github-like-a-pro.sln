@@ -7,6 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0A390B88-BC3
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Console", "src\Console\Console.fsproj", "{BA3D2AC4-564F-400E-83C0-FF5D271D3C3D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{5E6B6BDC-8C19-468A-BB8D-E3234E5AF270}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Console.Unit", "test\Console.Unit\Console.Unit.fsproj", "{208FCCD0-DF71-41A5-A513-1F6C124676B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,8 +24,13 @@ Global
 		{BA3D2AC4-564F-400E-83C0-FF5D271D3C3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA3D2AC4-564F-400E-83C0-FF5D271D3C3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA3D2AC4-564F-400E-83C0-FF5D271D3C3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{208FCCD0-DF71-41A5-A513-1F6C124676B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{208FCCD0-DF71-41A5-A513-1F6C124676B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{208FCCD0-DF71-41A5-A513-1F6C124676B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{208FCCD0-DF71-41A5-A513-1F6C124676B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{BA3D2AC4-564F-400E-83C0-FF5D271D3C3D} = {0A390B88-BC3A-4830-B14F-C7E25AFDE98D}
+		{208FCCD0-DF71-41A5-A513-1F6C124676B8} = {5E6B6BDC-8C19-468A-BB8D-E3234E5AF270}
 	EndGlobalSection
 EndGlobal
