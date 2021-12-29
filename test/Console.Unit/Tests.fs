@@ -1,9 +1,9 @@
 module Tests
 
-open Xunit
 open Program
 open FsCheck
 open FsCheck.Xunit
+open Swensen.Unquote
 
 let multipleOfThree n = n * 3
 let multipleOfFive n = n * 5
@@ -40,18 +40,18 @@ type NotThreeOrFiveGenerator =
 
 [<Property(Arbitrary = [| typeof<ThreeGenerator> |])>]
 let ``Multiple of three should contain Fizz`` (underTest: int) =
-    Assert.Contains("Fizz", fizzbuzz underTest)
+    test <@ (fizzbuzz underTest).Contains("Fizz") @>
 
 [<Property(Arbitrary = [| typeof<FiveGenerator> |])>]
 let ``Multiple of five should contain Buzz`` (underTest) =
-    Assert.Contains("Buzz", fizzbuzz underTest)
+    test <@ (fizzbuzz underTest).Contains("Buzz") @>
 
 [<Property(Arbitrary = [| typeof<ThreeAndFiveGenerator> |])>]
 let ``Multiple of three and five should be equal to FizzBuzz`` (underTest) =
-    Assert.Equal("FizzBuzz", fizzbuzz underTest)
+    test <@ "FizzBuzz" = fizzbuzz underTest @>
 
 [<Property(Arbitrary = [| typeof<NotThreeOrFiveGenerator> |])>]
 let ``Not Multiple of three or five should be equal to the same number`` (underTest) =
-    Assert.Equal(string underTest, fizzbuzz underTest)
+    test <@ string underTest = fizzbuzz underTest @>
 
 
